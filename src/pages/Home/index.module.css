@@ -1,0 +1,8 @@
+.dogList {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    background-color: grey;
+    width: 80%;
+    margin: 0 auto;
+}

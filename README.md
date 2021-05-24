@@ -1,6 +1,37 @@
-# Getting Started with Create React App
+# React Dog Breeds
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+
+It utilizes the Dog API:
+https://dog.ceo/dog-api/documentation/
+
+It is built using React Context, Hooks, and tested with React Testing Library
+
+## File Structure
+
+Src folder contains:
+
+`components` - individual reusable components that make up the page UI 
+
+`pages` - components that represent full pages in the UI and are made up of other componenents
+
+`contexts` - global state context to be consumed by the app 
+
+`reducers` - reducers that allow for easier state manipulation - all props fetching and manipulation happens in these files
+
+`utils` - utility functions and constants
+
+
+## Context API
+Global State is used to keep all props that are fetched form the API to be consistant throughout the app. 
+
+Props fetching happens on initial app load and all props manipulation happens in the utility function `mapDogProps.js`. The exception being props that change - the current and next dog props are all manipulatied on the reducer level. 
+## Tests
+Tests are done using React Testing Library and current tests are written in:
+
+`src -> components -> DogGallery`
+`src -> pages -> Home`
+
 
 ## Available Scripts
 
@@ -29,42 +60,3 @@ Your app is ready to be deployed!
 
 See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
 
-### `yarn eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
-
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
-
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `yarn build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
